@@ -1,5 +1,6 @@
 {
   "name": "@actionanand/single-spa-react",
+  "homepage": "http://actionanand.github.io/single-spa-react",
   "scripts": {
     "start": "webpack serve --port 20223",
     "start:standalone": "webpack serve --env standalone",
@@ -12,7 +13,9 @@
     "test": "cross-env BABEL_ENV=test jest",
     "watch-tests": "cross-env BABEL_ENV=test jest --watch",
     "prepare": "husky install",
-    "coverage": "cross-env BABEL_ENV=test jest --coverage"
+    "coverage": "cross-env BABEL_ENV=test jest --coverage",
+    "predeploy": "yarn run build:webpack",
+    "deploy": "gh-pages -d dist"
   },
   "devDependencies": {
     "@babel/core": "^7.15.0",
@@ -30,6 +33,7 @@
     "eslint-config-prettier": "^8.3.0",
     "eslint-config-react-important-stuff": "^3.0.0",
     "eslint-plugin-prettier": "^3.4.1",
+    "gh-pages": "^4.0.0",
     "husky": "^7.0.2",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^27.0.6",
