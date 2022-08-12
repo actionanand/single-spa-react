@@ -1,11 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import { getData, state$ } from '@actionanand/utility';
 
-export default function Root(props) {
-  console.log(props);
+import classes from './root.component.module.css';
 
-  let angTodo = 'My new Todo';
+export default function Root(props) {
+  // console.log(props);
+
+  let angTodo = '';
+
+  const [todo, setTodo] = useState(angTodo);
 
   React.useEffect(() => {
     getData('/data').then(data => {
@@ -22,15 +26,29 @@ export default function Root(props) {
 
   });
 
-  const handleClick = () => {
-    const event = new CustomEvent('react', { detail: {angTodo} });
-    window.dispatchEvent(event);
+  const handleChange = (event) => {
+    setTodo(event.target.value);
   }
 
+  const handleSubmit = (event) => {
+    if (todo.trim()) {
+      angTodo = todo;
+      const event = new CustomEvent('react', { detail: {angTodo} });
+      window.dispatchEvent(event);
+    }
+    angTodo = '';
+    setTodo(angTodo);
+
+    event.preventDefault();
+  };
+
   return (
-    <div>
-      <section>{props.name} is mounted!</section>
-      <button onClick={handleClick}>cool</button>
+    <div className={classes.reactWrap}>
+      {/* <section>{props.name} is mounted!</section> */}
+      <form onSubmit={handleSubmit}>
+      <input type='text' placeholder='Your todo' value={todo} onChange={handleChange} className={classes.todoInput} />
+      <button type='submit' className={classes.todoBtn}> Add to my todo </button>
+      </form>
     </div>
   );
 }
