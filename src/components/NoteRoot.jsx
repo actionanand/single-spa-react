@@ -12,34 +12,34 @@ const NoteRoot = () => {
 	const [notes, setNotes] = useState([
 		{
 			id: nanoid(),
-			text: 'This is my first note!',
-			date: '15/04/2021',
+			text: 'React is getting improved day by day. So have the fun!',
+			date: '01/01/2022',
 		},
 		{
 			id: nanoid(),
-			text: 'This is my second note!',
-			date: '21/04/2021',
+			text: 'Single-spa help us use more than one JS framework or JS library along with pure JS in a single project.',
+			date: '13/02/2022',
 		},
 		{
 			id: nanoid(),
-			text: 'This is my third note!',
-			date: '28/04/2021',
+			text: "Preact is a good alternative to React with the same modern API and it's only around 3kB.",
+			date: '27/05/2022',
 		},
 		{
 			id: nanoid(),
-			text: 'This is my new note!',
-			date: '30/04/2021',
+			text: 'react-icons is an awesome npm library, which has almost all the available icons ready for our react project.',
+			date: '13/08/2022',
 		},
 	]);
+
+	const localStorageName = 'single-spa-react-notes';
 
 	const [searchText, setSearchText] = useState('');
 
 	const [darkMode, setDarkMode] = useState(false);
 
 	useEffect(() => {
-		const savedNotes = JSON.parse(
-			localStorage.getItem('react-notes-app-data')
-		);
+		const savedNotes = JSON.parse(localStorage.getItem(localStorageName));
 
 		if (savedNotes) {
 			setNotes(savedNotes);
@@ -47,10 +47,7 @@ const NoteRoot = () => {
 	}, []);
 
 	useEffect(() => {
-		localStorage.setItem(
-			'react-notes-app-data',
-			JSON.stringify(notes)
-		);
+		localStorage.setItem(localStorageName, JSON.stringify(notes));
 	}, [notes]);
 
 	const addNote = (text) => {
