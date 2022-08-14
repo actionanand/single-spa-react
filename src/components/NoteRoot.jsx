@@ -8,7 +8,7 @@ import Header from './Header';
 
 import classes from './NoteRoot.module.css';
 
-const NoteRoot = () => {
+const NoteRoot = ({title}) => {
 	const [notes, setNotes] = useState([
 		{
 			id: nanoid(),
@@ -69,7 +69,7 @@ const NoteRoot = () => {
 	return (
 		<div className={`${darkMode && classes.darkMode}`}>
 			<div className={classes.container}>
-				<Header handleToggleDarkMode={setDarkMode} />
+				<Header handleToggleDarkMode={setDarkMode} title={title} />
 				<Search handleSearchNote={setSearchText} />
 				<NotesList
 					notes={notes.filter((note) =>

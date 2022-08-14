@@ -2,10 +2,10 @@ import React from 'react';
 
 import classes from './Header.module.css';
 
-const Header = ({ handleToggleDarkMode }) => {
+const Header = ({ title:spaTitle, handleToggleDarkMode }) => {
 	return (
 		<div className={classes.header}>
-			<h1>Notes</h1>
+			<h1> { spaTitle } </h1>
 			{/* <button
 				onClick={() =>
 					handleToggleDarkMode(

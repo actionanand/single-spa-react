@@ -52,7 +52,7 @@ export default function Root(props) {
           className={classes.todoInput} />
         <button type='submit' className={classes.todoBtn}> Add to my todo </button>
       </form>
-      <NoteRoot/>
+      <NoteRoot title={props.reactTitle} />
     </div>
   );
 }
