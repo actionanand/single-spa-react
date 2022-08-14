@@ -32,14 +32,14 @@ const NoteRoot = () => {
 		},
 	]);
 
+	const localStorageName = 'single-spa-react-notes';
+
 	const [searchText, setSearchText] = useState('');
 
 	const [darkMode, setDarkMode] = useState(false);
 
 	useEffect(() => {
-		const savedNotes = JSON.parse(
-			localStorage.getItem('react-notes-app-data')
-		);
+		const savedNotes = JSON.parse(localStorage.getItem(localStorageName));
 
 		if (savedNotes) {
 			setNotes(savedNotes);
@@ -47,10 +47,7 @@ const NoteRoot = () => {
 	}, []);
 
 	useEffect(() => {
-		localStorage.setItem(
-			'react-notes-app-data',
-			JSON.stringify(notes)
-		);
+		localStorage.setItem(localStorageName, JSON.stringify(notes));
 	}, [notes]);
 
 	const addNote = (text) => {
