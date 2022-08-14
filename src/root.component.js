@@ -4,6 +4,8 @@ import { getData, state$ } from '@actionanand/utility';
 
 import classes from './root.component.module.css';
 
+import NoteRoot from './components/NoteRoot';
+
 export default function Root(props) {
   // console.log(props);
 
@@ -46,9 +48,10 @@ export default function Root(props) {
     <div className={classes.reactWrap}>
       {/* <section>{props.name} is mounted!</section> */}
       <form onSubmit={handleSubmit}>
-      <input type='text' placeholder='Your todo' value={todo} onChange={handleChange} className={classes.todoInput} />
-      <button type='submit' className={classes.todoBtn}> Add to my todo </button>
+        <input type='text' placeholder='Your todo' value={todo} onChange={handleChange} className={classes.todoInput} />
+        <button type='submit' className={classes.todoBtn}> Add to my todo </button>
       </form>
+      <NoteRoot/>
     </div>
   );
 }
