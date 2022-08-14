@@ -47,8 +47,9 @@ export default function Root(props) {
   return (
     <div className={classes.reactWrap}>
       {/* <section>{props.name} is mounted!</section> */}
-      <form onSubmit={handleSubmit}>
-        <input type='text' placeholder='Your todo' value={todo} onChange={handleChange} className={classes.todoInput} />
+      <form onSubmit={handleSubmit} className={classes.reactForm}>
+        <input type='text' placeholder='Your todo' value={todo} onChange={handleChange} 
+          className={classes.todoInput} />
         <button type='submit' className={classes.todoBtn}> Add to my todo </button>
       </form>
       <NoteRoot/>

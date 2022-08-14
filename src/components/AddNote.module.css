@@ -2,13 +2,13 @@
 	background-color: #67d7cc;
 }
 
-textarea {
+.new textarea {
 	border: none;
 	resize: none;
 	background-color: #67d7cc;
 }
 
-textarea:focus {
+.new textarea:focus {
 	outline: none;
 }
 

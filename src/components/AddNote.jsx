@@ -20,7 +20,7 @@ const AddNote = ({ handleAddNote }) => {
 	};
 
 	return (
-		<div className='note new'>
+		<div className={`${classes.new} ${classes.note}`}>
 			<textarea
 				rows='8'
 				cols='10'
