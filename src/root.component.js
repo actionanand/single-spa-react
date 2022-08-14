@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import { getData, state$ } from '@actionanand/utility';
 
@@ -27,6 +27,10 @@ export default function Root(props) {
     }
 
   });
+
+  useEffect(() => {
+    document.title = 'Single-Spa React - Notes'
+  }, []);
 
   const handleChange = (event) => {
     setTodo(event.target.value);
