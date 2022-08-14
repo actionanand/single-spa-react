@@ -16,3 +16,8 @@
 .search input:focus {
 	outline: none;
 }
+
+.searchIcons:hover {
+  color: green;
+  cursor: not-allowed
+}

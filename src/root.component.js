@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import { getData, state$ } from '@actionanand/utility';
 
@@ -28,6 +28,10 @@ export default function Root(props) {
 
   });
 
+  useEffect(() => {
+    document.title = 'Single-Spa React - Notes'
+  }, []);
+
   const handleChange = (event) => {
     setTodo(event.target.value);
   }
@@ -52,7 +56,7 @@ export default function Root(props) {
           className={classes.todoInput} />
         <button type='submit' className={classes.todoBtn}> Add to my todo </button>
       </form>
-      <NoteRoot/>
+      <NoteRoot title={props.reactTitle} />
     </div>
   );
 }

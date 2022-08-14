@@ -16,6 +16,7 @@ const NotesList = ({
 					text={note.text}
 					date={note.date}
 					handleDeleteNote={handleDeleteNote}
+          key={note.id}
 				/>
 			))}
 			<AddNote handleAddNote={handleAddNote} />

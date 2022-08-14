@@ -63,7 +63,6 @@ Each repo can be set up with [Travis CI](https://travis-ci.org/) for running job
 - [RawGit](https://rawgit.com/)
 - [Raw Github js file not loading (direct link) like CDN - stackoverflow](https://stackoverflow.com/questions/62901066/raw-github-js-file-not-loading-direct-link-like-cdn/)
 - [How to deploy a React, Angular and Vue project to Github pages](https://deepinder.me/how-to-deploy-a-react-angular-vue-project-to-github-pages)
-how-to-deploy-a-react-angular-vue-project-to-github-pages)
 - [Micro frontends: Cross-application communication with Single-Spa and RxJS.](https://obaranovskyi.medium.com/micro-frontends-cross-application-communication-with-single-spa-and-rxjs-aa55084bf344)
 - [Implementing Micro Frontends Using Single SPA](https://betterprogramming.pub/implementing-micro-frontends-using-single-spa-1ac2a3f704a2)
 - [45 Best React Projects for Beginners in Easy to Hard Order](https://contactmentor.com/best-react-projects-for-beginners-easy/)
