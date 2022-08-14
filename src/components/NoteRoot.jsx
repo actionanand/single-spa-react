@@ -70,8 +70,8 @@ const NoteRoot = () => {
 	};
 
 	return (
-		<div className={`${darkMode && 'dark-mode'}`}>
-			<div className='container'>
+		<div className={`${darkMode && classes.darkMode}`}>
+			<div className={classes.container}>
 				<Header handleToggleDarkMode={setDarkMode} />
 				<Search handleSearchNote={setSearchText} />
 				<NotesList

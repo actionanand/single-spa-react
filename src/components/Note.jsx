@@ -4,13 +4,13 @@ import classes from './Note.module.css';
 
 const Note = ({ id, text, date, handleDeleteNote }) => {
 	return (
-		<div className='note'>
+		<div className={classes.note}>
 			<span>{text}</span>
-			<div className='note-footer'>
+			<div className={classes.noteFooter}>
 				<small>{date}</small>
 				<MdDeleteForever
 					onClick={() => handleDeleteNote(id)}
-					className='delete-icon'
+					className={classes.deleteIcon}
 					size='1.3em'
 				/>
 			</div>

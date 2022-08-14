@@ -4,7 +4,7 @@ import classes from './Header.module.css';
 
 const Header = ({ handleToggleDarkMode }) => {
 	return (
-		<div className='header'>
+		<div className={classes.header}>
 			<h1>Notes</h1>
 			<button
 				onClick={() =>
@@ -12,7 +12,7 @@ const Header = ({ handleToggleDarkMode }) => {
 						(previousDarkMode) => !previousDarkMode
 					)
 				}
-				className='save'
+				className={classes.save}
 			>
 				Toggle Mode
 			</button>

@@ -6,8 +6,8 @@ import classes from './Search.module.css';
 
 const Search = ({ handleSearchNote }) => {
 	return (
-		<div className='search'>
-			<MdSearch className='search-icons' size='1.3em' />
+		<div className={classes.search}>
+			<MdSearch className='searchIcons' size='1.3em' />
 			<input
 				onChange={(event) =>
 					handleSearchNote(event.target.value)
