@@ -1,4 +1,8 @@
 .reactWrap {
+  min-height: 70vh;
+}
+
+.reactForm {
   display: flex;
   justify-content: center;
   flex-direction: row;
